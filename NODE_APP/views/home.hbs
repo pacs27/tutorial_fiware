@@ -1,0 +1,22 @@
+
+
+{{#if message}}
+<div class="alert {{messageClass}}" role="alert">
+    {{message}}
+</div>
+{{/if}}
+
+
+<div style="margin-top: 40px">
+     {{#unless userAuth}}
+    <a href="/auth/login" class="btn btn-primary btn-lg active">Login</a>
+    <a href="/register" class="btn btn-primary btn-lg active">Register</a>
+    <a href="/lorawan" class="btn btn-primary btn-lg active">Lorawan</a>
+
+    {{else}}
+    <a href="/sensor/level1" class="btn btn-primary btn-lg active">Sensor Lvl 1</a>
+        <a href="/sensor/level2" class="btn btn-primary btn-lg active">Sensor Lvl 2</a>
+    <a href="/sensor/level3" class="btn btn-primary btn-lg active">Sensor Lvl 3</a>
+
+    {{/unless}}
+</div>

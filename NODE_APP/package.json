@@ -1,0 +1,33 @@
+{
+  "name": "fiware_app",
+  "version": "1.0.0",
+  "description": "Fist fiware app",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node app",
+    "dev": "cross-env NODE_ENV=development nodemon app"
+  },
+  "author": "Francisco puig",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.11.15",
+    "multer": "^1.4.2",
+    "ngsi_v2": "^0.2.1",
+    "ttn": "^2.3.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "crypto": "^1.0.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7"
+  }
+}

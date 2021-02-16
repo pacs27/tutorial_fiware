@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Irrigation App</a>
+        {{#if userAuth}}
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                User: {{userAuth}}
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/auth/logout">Log Out</a>
+            </div>
+        </div>
+        {{else}}
+        <span class="navbar-text">
+           User: {{noUser}}
+        </span>
+
+        {{/if}}
+    </div>
+</nav>
