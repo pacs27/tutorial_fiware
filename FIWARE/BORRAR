@@ -1,0 +1,33 @@
+curl localhost:4041/iot/devices -s -S --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'fiware-service: rabanales' --header 'fiware-servicepath: /parcelaOlivar' -d @- <<EOF
+{
+    "devices": [
+    {
+      "device_id": "lora_n_003",
+      "entity_name": "LORA-N-003",
+      "entity_type": "LoraDevice",
+      "timezone": "America/Santiago",
+      "attributes": [
+        {
+          "object_id": "temperature",
+          "name": "temperature",
+          "type": "Number"
+        }
+      ],
+    "internal_attributes": {
+        "lorawan": {
+          "application_server": {
+            "host": "eu.thethings.network",
+            "username": "pacopuig",
+            "password": "3234casa",
+            "provider": "TTN"
+          },
+          "app_eui": "70B3D57ED003D64E",
+          "application_id": "cubecell_p1",
+          "application_key": "ttn-account-v2.zmaiabuvbJSCbs4yB3iIU_EUpQ4IPA4gaiw-lG17afI",
+          "data_model": "application_server"
+    }
+  }
+}
+]
+}
+EOF
