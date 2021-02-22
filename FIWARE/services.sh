@@ -25,11 +25,11 @@ loadData() {
 	echo "Calling quantumLeap-sub.sh"
 	./sh_files/quantumleap-sub.sh
 
-	echo ""
-	waitForIoTAgent
-	echo ""
-	echo "Calling provision-devices.sh"
-	./sh_files/provision-devices.sh
+	# echo ""
+	# waitForIoTAgent
+	# echo ""
+	# echo "Calling provision-devices.sh"
+	# ./sh_files/provision-devices.sh
 
 }
 
