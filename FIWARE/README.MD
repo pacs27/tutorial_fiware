@@ -1,9 +1,10 @@
 # README
 
 ## OAUTH2 TOKEN
-1. GET OAUTH2 TOKEN = ```echo -n e6365d07-e666-4f09-b053-7a73e63ac5f3:83587e8c-4f4b-4255-b791-a4888c03156a | base64```
+1. GET OAUTH2 TOKEN = ```echo -n 243f223b-7c0e-4e8f-af4a-bb079e54ec76:61a05eda-022a-4310-8866-cf0cec0698ff| base64```
+2. Get the token in this URL: [base64](https://v2.cryptii.com/text/base64)
 
-2. TOKEN: ```ZTYzNjVkMDctZTY2Ni00ZjA5LWIwNTMtN2E3M2U2M2FjNWYzOjgzNTg3ZThjLTRmNGItNDI1NS1iNzkxLWE0ODg4YzAzMTU2YQ==```
+2. TOKEN: ```MjQzZjIyM2ItN2MwZS00ZThmLWFmNGEtYmIwNzllNTRlYzc2OjYxYTA1ZWRhLTAyMmEtNDMxMC04ODY2LWNmMGNlYzA2OThmZg==```
 
 ## PRELOAD MYSQL DATABASE
 
@@ -18,3 +19,12 @@
 ### Inside Database File
 
 3. INSERT IN THE TOP OF THE DOCUMENT: `CREATE DATABASE idm; USE idm`
+
+
+
+curl -iX POST \
+  'http://localhost:3005/oauth2/token' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Basic LW4gMjQzZjIyM2ItN2MwZS00ZThmLWFmNGEtYmIwNzllNTRlYzc2OjYxYTA1ZWRhLTAyMmEtNDMxMC04ODY2LWNmMGNlYzA2OThmZgo=' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  --data "username=fiwareadmin@test.com&password=test&grant_type=password"

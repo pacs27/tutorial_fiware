@@ -25,11 +25,11 @@ loadData() {
 	echo "Calling quantumLeap-sub.sh"
 	./sh_files/quantumleap-sub.sh
 
-	# echo ""
-	# waitForIoTAgent
-	# echo ""
-	# echo "Calling provision-devices.sh"
-	# ./sh_files/provision-devices.sh
+	echo ""
+	waitForIoTAgent
+	echo ""
+	echo "Calling provision-devices.sh"
+	./sh_files/provision-devices.sh
 
 }
 
@@ -63,7 +63,7 @@ waitForOrion() {
 waitForIoTAgent() {
 	echo -e "\n⏳ Waiting for \033[1;36mIoT-Agent\033[0m to be available\n"
 	while ! [ $(docker inspect --format='{{.State.Health.Status}}' fiware-iot-agent) == "healthy" ]; do
-		echo -e "IoT Agent HTTP state: " $(curl -s -o /dev/null -w %{http_code} 'http://localhost:4041/version') " (waiting for 200)"
+		echo -e "IoT Agent HTTP state: " $(curl -s -o /dev/null -w %{http_code} 'http://localhost:4041/iot/about') " (waiting for 200)"
 		sleep 1
 	done
 }

@@ -84,6 +84,7 @@ services:
       - IOTA_PROVIDER_URL=http://iot-agent:${IOTA_NORTH_PORT}
       - IOTA_DEFAULT_RESOURCE=/iot/d
     healthcheck:
+      test: curl --fail -s http://localhost:4041/iot/about || exit 1
       interval: 5s
 
    # Keyrock is an Identity Management Front-End

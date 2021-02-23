@@ -157,7 +157,6 @@ curl -X POST \
 
 
 function Decoder(bytes, port) {
-    //source: https://flows.nodered.org/flow/845bb5b8cf788939dd261f472c289f77
    var temperature = "";
    var humidity = "";
    for (var i = 0; i < bytes.length; i++) {
@@ -177,4 +176,7 @@ function Decoder(bytes, port) {
 curl -X GET \
   http://localhost:1026/v2/entities \
   -H 'fiware-service: rabanales' \
-  -H 'fiware-servicepath: /parcelaOlivar'
+  -H 'fiware-servicepath: /parcelaOlivar' \
+  | python -mjson.tool
+
+
