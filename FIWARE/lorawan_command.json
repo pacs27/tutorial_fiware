@@ -180,3 +180,60 @@ curl -X GET \
   | python -mjson.tool
 
 
+  curl -X POST \
+  "http://localhost:4041/iot/services" \
+  -H 'Content-Type: application/json' \
+  -H 'fiware-service: rabanales' \
+  -H 'fiware-servicepath: /parcelaOlivar' \
+  -d '{
+      "services": [
+     {
+      "entity_type": "LoraDeviceGroup",
+      "apikey": "",
+      "resource": "70B3D57ED003D64E",
+      "attributes": [
+        {
+          "object_id": "t1",
+          "name": "temperature_1",
+          "type": "Number"
+        }
+      ],
+      "internal_attributes": {
+          "lorawan": {
+            "application_server": {
+              "host": "eu.thethings.network",
+              "username": "cubecell_p1",
+              "password": "ttn-account-v2.zmaiabuvbJSCbs4yB3iIU_EUpQ4IPA4gaiw-lG17afI",
+              "provider": "TTN"
+            },
+            "app_eui": "70B3D57ED003D64E",
+            "application_id": "cubecell_p1",
+            "application_key": "B3145F149E238B667BB11BCA81B1C26D",
+            "data_model": "application_server"
+          }
+      },
+      "protocol": "LORAJSON"
+    }
+  ]
+}'
+
+curl -X POST \
+  "http://localhost:4041/iot/devices" \
+  -H 'Content-Type: application/json' \
+  -H 'fiware-service: rabanales' \
+  -H 'fiware-servicepath: /parcelaOlivar' \
+  -d '{
+  "devices": [
+    {
+      "device_id": "11",
+      "entity_name": "LORA-N-003",
+      "entity_type": "LoraDeviceGroup",
+      "timezone": "Europe/Berlin",
+      "internal_attributes": {
+        "lorawan": {
+          "dev_eui": "FFFFFFFFFFFFFFFF",
+          }
+      }
+    }
+  ]
+}'

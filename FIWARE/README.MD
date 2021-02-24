@@ -1,7 +1,7 @@
 # README
 
 ## OAUTH2 TOKEN
-1. GET OAUTH2 TOKEN = ```echo -n 243f223b-7c0e-4e8f-af4a-bb079e54ec76:61a05eda-022a-4310-8866-cf0cec0698ff| base64```
+1. GET OAUTH2 TOKEN = ```echo -n 243f223b-7c0e-4e8f-af4a-bb079e54ec76:61a05eda-022a-4310-8866-cf0cec0698ff| base64``` (sometimes fail)
 2. Get the token in this URL: [base64](https://v2.cryptii.com/text/base64)
 
 2. TOKEN: ```MjQzZjIyM2ItN2MwZS00ZThmLWFmNGEtYmIwNzllNTRlYzc2OjYxYTA1ZWRhLTAyMmEtNDMxMC04ODY2LWNmMGNlYzA2OThmZg==```
