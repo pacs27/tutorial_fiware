@@ -1,0 +1,308 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "AgriApp": "fiware:AgriApp",
+        "AgriParcel": "fiware:AgriParcel",
+        "AgriParcelRecord": "fiware:AgriParcelRecord",
+        "Female": "schema:Female",
+        "HumiditySensor": "fiware:HumiditySensor",
+        "Male": "schema:Male",
+        "Person": "fiware:Person",
+        "address": "fiware:address",
+        "alternateName": {
+            "@id": "fiware:alternateName",
+            "@type": "xsd:string"
+        },
+        "area": {
+            "@id": "fiware:area",
+            "@type": "xsd:number"
+        },
+        "areaServed": {
+            "@id": "fiware:areaServed",
+            "@type": "xsd:string"
+        },
+        "atmosphericPressure": {
+            "@id": "fiware:atmosphericPressure",
+            "@type": "xsd:number"
+        },
+        "belongsTo": {
+            "@id": "fiware:belongsTo",
+            "@type": "xsd:undefined"
+        },
+        "category": {
+            "@id": "fiware:category",
+            "@type": "xsd:undefined"
+        },
+        "cropStatus": {
+            "@id": "fiware:cropStatus",
+            "@type": "xsd:string"
+        },
+        "dataProvider": {
+            "@id": "fiware:dataProvider",
+            "@type": "xsd:string"
+        },
+        "dateCreated": {
+            "@id": "fiware:dateCreated",
+            "@type": "xs:dateTime"
+        },
+        "dateModified": {
+            "@id": "fiware:dateModified",
+            "@type": "xs:dateTime"
+        },
+        "depth": {
+            "@id": "fiware:depth",
+            "@type": "xsd:number"
+        },
+        "description": {
+            "@id": "fiware:description",
+            "@type": "xsd:string"
+        },
+        "endpoint": {
+            "@id": "fiware:endpoint",
+            "@type": "xs:anyURI"
+        },
+        "hasAgriApp": {
+            "@id": "fiware:hasAgriApp",
+            "@type": "xsd:array"
+        },
+        "hasAgriCrop": {
+            "@id": "fiware:hasAgriCrop",
+            "@type": "xsd:undefined"
+        },
+        "hasAgriParcel": {
+            "@id": "fiware:hasAgriParcel",
+            "@type": "xsd:undefined"
+        },
+        "hasAgriParcelChildren": {
+            "@id": "fiware:hasAgriParcelChildren",
+            "@type": "xsd:array"
+        },
+        "hasAgriParcelParent": {
+            "@id": "fiware:hasAgriParcelParent",
+            "@type": "xsd:undefined"
+        },
+        "hasAgriSoil": {
+            "@id": "fiware:hasAgriSoil",
+            "@type": "xsd:undefined"
+        },
+        "hasDevice": {
+            "@id": "fiware:hasDevice",
+            "@type": "xsd:array"
+        },
+        "hasDevices": {
+            "@id": "fiware:hasDevices",
+            "@type": "xsd:array"
+        },
+        "hasProvider": {
+            "@id": "fiware:hasProvider",
+            "@type": "xsd:undefined"
+        },
+        "lastPlantedAt": {
+            "@id": "fiware:lastPlantedAt",
+            "@type": "xs:dateTime"
+        },
+        "leafRelativeHumidity": {
+            "@id": "fiware:leafRelativeHumidity",
+            "@type": "xsd:number"
+        },
+        "leafTemperature": {
+            "@id": "fiware:leafTemperature",
+            "@type": "xsd:number"
+        },
+        "leafWetness": {
+            "@id": "fiware:leafWetness",
+            "@type": "xsd:number"
+        },
+        "location": {
+            "@id": "fiware:location",
+            "@type": "xsd:undefined"
+        },
+        "name": {
+            "@id": "fiware:name",
+            "@type": "xsd:string"
+        },
+        "observedAt": {
+            "@id": "fiware:observedAt",
+            "@type": "xs:dateTime"
+        },
+        "ownedBy": {
+            "@id": "fiware:ownedBy",
+            "@type": "xsd:undefined"
+        },
+        "owner": {
+            "@id": "fiware:owner",
+            "@type": "xsd:array"
+        },
+        "refActivity": {
+            "@id": "fiware:refActivity",
+            "@type": "xsd:undefined"
+        },
+        "refUser": {
+            "@id": "fiware:refUser",
+            "@type": "xsd:undefined"
+        },
+        "refUserDevice": {
+            "@id": "fiware:refUserDevice",
+            "@type": "xsd:undefined"
+        },
+        "relatedSource": {
+            "@id": "fiware:relatedSource",
+            "@type": "xsd:array"
+        },
+        "relativeHumidity": {
+            "@id": "fiware:relativeHumidity",
+            "@type": "xsd:number"
+        },
+        "seeAlso": {
+            "@id": "fiware:seeAlso",
+            "@type": "xsd:undefined"
+        },
+        "soilMoistureEC": {
+            "@id": "fiware:soilMoistureEC",
+            "@type": "xsd:number"
+        },
+        "soilMoistureVwc": {
+            "@id": "fiware:soilMoistureVwc",
+            "@type": "xsd:number"
+        },
+        "soilSalinity": {
+            "@id": "fiware:soilSalinity",
+            "@type": "xsd:number"
+        },
+        "soilTemperature": {
+            "@id": "fiware:soilTemperature",
+            "@type": "xsd:number"
+        },
+        "solarRadiaton": {
+            "@id": "fiware:solarRadiaton",
+            "@type": "xsd:number"
+        },
+        "source": {
+            "@id": "fiware:source",
+            "@type": "xsd:string"
+        },
+        "version": {
+            "@id": "fiware:version",
+            "@type": "xsd:string"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "fiware:AgriApp",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "This entity contains a harmonised description of a generic app made for the Agrifood domain. This entity is primarily associated with the agricultural vertical and related IoT applications."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "AgriApp"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:AgriParcel",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "This entity contains a harmonised description of a generic parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "AgriParcel"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:AgriParcelRecord",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "This entity contains a harmonised description of the conditions recorded on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications."
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "AgriParcelRecord"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:HumiditySensor",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": ""
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "HumiditySensor"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:Person",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Information on the context of an anonymized in a given point in time"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Person"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:hasAgriApp",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "List of agri App belonging to the User"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "hasAgriApp"
+                }
+            ]
+        }
+    ]
+}
